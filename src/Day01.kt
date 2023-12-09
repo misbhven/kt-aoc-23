@@ -4,8 +4,7 @@ fun main() {
         for (line in input) {
             val digits = line.filter{ it.isDigit() }
             if (digits.isNotEmpty()){
-                val sum: String = digits.first().toString() + digits.last().toString()
-                total += sum.toInt()
+                total += "${digits.first()}${digits.last()}".toInt()
             }
         }
         return total
@@ -28,7 +27,6 @@ fun main() {
         }
         return total
     }
-
 
     // test if implementation meets criteria from the description, like:
     val testInput = readInput("Day01_test")
