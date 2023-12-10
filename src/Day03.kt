@@ -65,7 +65,4 @@ data class Number(val y: Int, val x: IntRange, val value: Int) : Item() {
 
 fun Number(y: Int, xStart: Int, xEnd: Int, value: String) : Number = Number(y, xStart..xEnd, value.toInt())
 
-data class Symbol(val y: Int, val x: Int, val value: String) : Item() {
-    val windowX : IntRange = x - 1..x + 1
-    val windowY : IntRange = y - 1..y + 1
-}
+data class Symbol(val y: Int, val x: Int, val value: String) : Item()
